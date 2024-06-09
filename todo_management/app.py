@@ -2,8 +2,10 @@ from model import Todo
 from model import db
 from flask import Flask, jsonify, request
 from flask_migrate import Migrate
+from config import Config
 
 app = Flask(__name__)
+app.config.from_object(Config)
 db.init_app(app)
 migrate = Migrate(app, db)
 
@@ -27,10 +29,9 @@ def entry():
         elif action == 'update':
             return update_todo(data)
         elif action == 'delete':
-            delete_todo(data)
+            return delete_todo(data)
         else:
             return jsonify('Invalid action'), 400
-        return jsonify('Gateway')
     except KeyError:
         return jsonify('No action provided'), 400
     except Exception as e:
@@ -38,7 +39,7 @@ def entry():
     
 def create_todo(data):
     try:
-        todo = Todo(user_id=data['user_id'],text=data['text'], complete=False)
+        todo = Todo(user_id=data['user_id'],task=data['task'], completed=False)
         todo.save()
         return jsonify(body=todo.to_dict()), 201
     except KeyError as e:
@@ -48,10 +49,10 @@ def create_todo(data):
   
 def read_todo(data):
     try:
-        if data['id']:
+        if data.get('id'):
             todo = Todo.get_or_404(data['id'])
             return jsonify(body=todo.to_dict()), 200
-        elif data['user_id']:
+        elif data.get('user_id'):
             todo = Todo.filter_all(user_id=data['user_id'])
             return jsonify(body=[t.to_dict() for t in todo] if todo else []), 200
         else:
@@ -64,7 +65,8 @@ def read_todo(data):
     
 def update_todo(data):
     try:
-        todo = Todo.get_or_404(data['id']).first()
+        todo = Todo.get_or_404(data['id'])
+        data.pop('id', None)
         todo.update(data)
         todo.save()
         return jsonify(body=todo.to_dict()), 200
@@ -75,7 +77,7 @@ def update_todo(data):
 
 def delete_todo(data):
     try:
-        todo = Todo.get_or_404(data['id']).first()
+        todo = Todo.get_or_404(data['id'])
         todo.delete()
         return jsonify('Todo deleted'), 200
     except KeyError as e:

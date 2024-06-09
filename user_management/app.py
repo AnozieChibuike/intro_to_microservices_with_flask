@@ -2,8 +2,10 @@ from model import db
 from flask import Flask, jsonify, request
 from flask_migrate import Migrate
 from model import User
+from config import Config
 
 app = Flask(__name__)
+app.config.from_object(Config)
 db.init_app(app)
 migrate = Migrate(app, db)
 
@@ -26,7 +28,7 @@ def entry():
         elif action == "update":
             return update_user(data)
         elif action == "delete":
-            delete_user(data)
+            return delete_user(data)
         else:
             return jsonify("Invalid action"), 400
     except KeyError:
@@ -37,7 +39,7 @@ def entry():
 
 def create_user(data):
     try:
-        user = User(name=data["name"], email=data["email"])
+        user = User(email=data["email"])
         user.set_password(data["password"])
         user.save()
         return jsonify(body=user.to_dict()), 201
@@ -49,10 +51,10 @@ def create_user(data):
 
 def read_user(data):
     try:
-        if data["id"]:
+        if data.get("id"):
             user = User.get_or_404(data["id"])
             return jsonify(body=user.to_dict()), 200
-        elif data["email"]:
+        elif data.get("email"):
             user = User.filter_one(email=data["email"])
             if user is None:
                 return jsonify("User not found"), 404
@@ -69,7 +71,9 @@ def read_user(data):
 def update_user(data):
     try:
         user = User.get_or_404(data["id"])
-        user.set_password(data["password"]) if data["password"] else None
+        data.pop("id", None)
+        user.update(data)
+        user.set_password(data.get("password")) if data.get("password") else None
         user.save()
         return jsonify(body=user.to_dict()), 200
     except KeyError as e:

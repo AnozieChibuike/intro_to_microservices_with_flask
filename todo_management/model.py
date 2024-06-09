@@ -1,4 +1,4 @@
-from FlaskSQLAlchemyBaseModel import BaseModel, db
+from flasksqlalchemybasemodel import BaseModel, db
 
 class Todo(BaseModel):
     __tablename__ = 'todos'
