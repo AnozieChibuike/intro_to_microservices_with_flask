@@ -7,3 +7,4 @@ class Config:
     SECRET_KEY = "This should be something more secured" 
     SQLALCHEMY_DATABASE_URI = "sqlite:///" + db_path # We are using a test db for now, but we can change this to a production db later o
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    

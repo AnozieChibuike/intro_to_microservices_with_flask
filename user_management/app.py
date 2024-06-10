@@ -39,14 +39,16 @@ def entry():
 
 def create_user(data):
     try:
+        if User.exists(email=data["email"]):
+            return jsonify(error="User with email exists")
         user = User(email=data["email"])
         user.set_password(data["password"])
         user.save()
         return jsonify(body=user.to_dict()), 201
     except KeyError as e:
-        return jsonify(f"Missing key in the json: {e}"), 400
+        return jsonify(error=f"Missing key in the json: {e}"), 400
     except Exception as e:
-        return jsonify(str(e)), 400
+        return jsonify(error=str(e)), 400
 
 
 def read_user(data):
