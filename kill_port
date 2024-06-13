@@ -1,0 +1,9 @@
+#!/bin/bash
+PORT=$1
+PID=$(lsof -i :$PORT)
+if [ -z "$PID" ]; then
+    echo "No process running on port $PORT"
+else
+    kill $PID
+    echo "Terminated process $PID running on port $PORT"
+fi

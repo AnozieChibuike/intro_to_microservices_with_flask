@@ -10,6 +10,10 @@ def callApi(endpoint: str, route: str, body=None):
     response = requests.post(f"{endpoint}/{route}", json=body)
     return response.json(), response.status_code
 
+def login(data):
+    response, code = callApi(user_management_endpoint, "login", body=data)
+    return jsonify(response), code
+
 def user_exists(user_id):
     body = {"action":"read","id": user_id}
     response, code = callApi(user_management_endpoint, "users", body=body)

@@ -1,0 +1,139 @@
+[2024-06-11 13:22:28 +0100] [6162] [INFO] Starting gunicorn 22.0.0
+[2024-06-11 13:22:28 +0100] [6162] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2024-06-11 13:22:28 +0100] [6162] [ERROR] Retrying in 1 second.
+[2024-06-11 13:22:29 +0100] [6162] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2024-06-11 13:22:29 +0100] [6162] [ERROR] Retrying in 1 second.
+[2024-06-11 13:22:30 +0100] [6162] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2024-06-11 13:22:30 +0100] [6162] [ERROR] Retrying in 1 second.
+[2024-06-11 13:22:31 +0100] [6162] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2024-06-11 13:22:31 +0100] [6162] [ERROR] Retrying in 1 second.
+[2024-06-11 13:22:32 +0100] [6162] [INFO] Listening at: http://0.0.0.0:5000 (6162)
+[2024-06-11 13:22:32 +0100] [6162] [INFO] Using worker: sync
+[2024-06-11 13:22:32 +0100] [6194] [INFO] Booting worker with pid: 6194
+[2024-06-11 13:22:32 +0100] [6195] [INFO] Booting worker with pid: 6195
+[2024-06-11 13:22:32 +0100] [6162] [INFO] Handling signal: term
+[2024-06-11 13:22:34 +0100] [6195] [INFO] Worker exiting (pid: 6195)
+[2024-06-11 13:22:34 +0100] [6194] [INFO] Worker exiting (pid: 6194)
+[2024-06-11 13:22:34 +0100] [6162] [INFO] Shutting down: Master
+[2024-06-11 13:23:29 +0100] [6445] [INFO] Starting gunicorn 22.0.0
+[2024-06-11 13:23:29 +0100] [6445] [INFO] Listening at: http://0.0.0.0:5001 (6445)
+[2024-06-11 13:23:29 +0100] [6445] [INFO] Using worker: sync
+[2024-06-11 13:23:29 +0100] [6448] [INFO] Booting worker with pid: 6448
+[2024-06-11 13:23:29 +0100] [6452] [INFO] Booting worker with pid: 6452
+[2024-06-11 13:23:30 +0100] [6445] [INFO] Handling signal: term
+[2024-06-11 13:23:31 +0100] [6448] [INFO] Worker exiting (pid: 6448)
+[2024-06-11 13:23:32 +0100] [6452] [INFO] Worker exiting (pid: 6452)
+[2024-06-11 13:23:32 +0100] [6445] [INFO] Shutting down: Master
+[2024-06-11 13:23:41 +0100] [6517] [INFO] Starting gunicorn 22.0.0
+[2024-06-11 13:23:41 +0100] [6517] [INFO] Listening at: http://0.0.0.0:5001 (6517)
+[2024-06-11 13:23:41 +0100] [6517] [INFO] Using worker: sync
+[2024-06-11 13:23:41 +0100] [6522] [INFO] Booting worker with pid: 6522
+[2024-06-11 13:23:41 +0100] [6525] [INFO] Booting worker with pid: 6525
+[2024-06-11 15:19:34 +0100] [27975] [INFO] Starting gunicorn 22.0.0
+[2024-06-11 15:19:34 +0100] [27975] [ERROR] Connection in use: ('0.0.0.0', 5001)
+[2024-06-11 15:19:34 +0100] [27975] [ERROR] Retrying in 1 second.
+[2024-06-11 15:19:35 +0100] [27975] [ERROR] Connection in use: ('0.0.0.0', 5001)
+[2024-06-11 15:19:35 +0100] [27975] [ERROR] Retrying in 1 second.
+[2024-06-11 15:19:36 +0100] [27975] [ERROR] Connection in use: ('0.0.0.0', 5001)
+[2024-06-11 15:19:36 +0100] [27975] [ERROR] Retrying in 1 second.
+[2024-06-11 15:19:37 +0100] [27975] [ERROR] Connection in use: ('0.0.0.0', 5001)
+[2024-06-11 15:19:37 +0100] [27975] [ERROR] Retrying in 1 second.
+[2024-06-11 15:19:38 +0100] [27975] [ERROR] Connection in use: ('0.0.0.0', 5001)
+[2024-06-11 15:19:38 +0100] [27975] [ERROR] Retrying in 1 second.
+[2024-06-11 15:19:39 +0100] [27975] [ERROR] Can't connect to ('0.0.0.0', 5001)
+[2024-06-11 15:21:50 +0100] [6517] [INFO] Handling signal: term
+[2024-06-11 15:21:50 +0100] [6522] [INFO] Worker exiting (pid: 6522)
+[2024-06-11 15:21:50 +0100] [6525] [INFO] Worker exiting (pid: 6525)
+[2024-06-11 15:21:50 +0100] [6517] [ERROR] Worker (pid:6525) was sent SIGTERM!
+[2024-06-11 15:21:51 +0100] [6517] [INFO] Shutting down: Master
+[2024-06-11 15:22:03 +0100] [28584] [INFO] Starting gunicorn 22.0.0
+[2024-06-11 15:22:03 +0100] [28584] [INFO] Listening at: http://0.0.0.0:5001 (28584)
+[2024-06-11 15:22:03 +0100] [28584] [INFO] Using worker: sync
+[2024-06-11 15:22:03 +0100] [28588] [INFO] Booting worker with pid: 28588
+[2024-06-11 15:22:03 +0100] [28591] [INFO] Booting worker with pid: 28591
+[2024-06-11 16:22:33 +0100] [42888] [INFO] Starting gunicorn 22.0.0
+[2024-06-11 16:22:33 +0100] [42888] [ERROR] Connection in use: ('0.0.0.0', 5001)
+[2024-06-11 16:22:33 +0100] [42888] [ERROR] Retrying in 1 second.
+[2024-06-11 16:22:34 +0100] [42888] [ERROR] Connection in use: ('0.0.0.0', 5001)
+[2024-06-11 16:22:34 +0100] [42888] [ERROR] Retrying in 1 second.
+[2024-06-11 16:22:35 +0100] [42888] [ERROR] Connection in use: ('0.0.0.0', 5001)
+[2024-06-11 16:22:35 +0100] [42888] [ERROR] Retrying in 1 second.
+[2024-06-11 16:22:36 +0100] [42888] [ERROR] Connection in use: ('0.0.0.0', 5001)
+[2024-06-11 16:22:36 +0100] [42888] [ERROR] Retrying in 1 second.
+[2024-06-11 16:22:37 +0100] [42888] [ERROR] Connection in use: ('0.0.0.0', 5001)
+[2024-06-11 16:22:37 +0100] [42888] [ERROR] Retrying in 1 second.
+[2024-06-11 16:22:38 +0100] [42888] [ERROR] Can't connect to ('0.0.0.0', 5001)
+[2024-06-11 16:22:48 +0100] [28584] [INFO] Handling signal: term
+[2024-06-11 16:22:48 +0100] [28591] [INFO] Worker exiting (pid: 28591)
+[2024-06-11 16:22:48 +0100] [28588] [INFO] Worker exiting (pid: 28588)
+[2024-06-11 16:22:49 +0100] [28584] [INFO] Shutting down: Master
+[2024-06-11 16:22:59 +0100] [43014] [INFO] Starting gunicorn 22.0.0
+[2024-06-11 16:22:59 +0100] [43014] [INFO] Listening at: http://0.0.0.0:5001 (43014)
+[2024-06-11 16:22:59 +0100] [43014] [INFO] Using worker: sync
+[2024-06-11 16:22:59 +0100] [43023] [INFO] Booting worker with pid: 43023
+[2024-06-11 16:22:59 +0100] [43024] [INFO] Booting worker with pid: 43024
+[2024-06-11 17:59:34 +0100] [43014] [INFO] Handling signal: term
+[2024-06-11 17:59:35 +0100] [43023] [INFO] Worker exiting (pid: 43023)
+[2024-06-11 17:59:35 +0100] [43024] [INFO] Worker exiting (pid: 43024)
+[2024-06-11 17:59:35 +0100] [43014] [INFO] Shutting down: Master
+[2024-06-13 16:41:21 +0100] [502] [INFO] Starting gunicorn 22.0.0
+[2024-06-13 16:41:21 +0100] [502] [INFO] Listening at: http://0.0.0.0:5001 (502)
+[2024-06-13 16:41:21 +0100] [502] [INFO] Using worker: sync
+[2024-06-13 16:41:21 +0100] [507] [INFO] Booting worker with pid: 507
+[2024-06-13 16:41:21 +0100] [511] [INFO] Booting worker with pid: 511
+[2024-06-13 16:44:13 +0100] [502] [INFO] Handling signal: term
+[2024-06-13 16:44:14 +0100] [507] [INFO] Worker exiting (pid: 507)
+[2024-06-13 16:44:14 +0100] [511] [INFO] Worker exiting (pid: 511)
+[2024-06-13 16:44:15 +0100] [502] [INFO] Shutting down: Master
+[2024-06-13 16:44:25 +0100] [1437] [INFO] Starting gunicorn 22.0.0
+[2024-06-13 16:44:25 +0100] [1437] [INFO] Listening at: http://0.0.0.0:5001 (1437)
+[2024-06-13 16:44:25 +0100] [1437] [INFO] Using worker: sync
+[2024-06-13 16:44:25 +0100] [1461] [INFO] Booting worker with pid: 1461
+[2024-06-13 16:44:25 +0100] [1464] [INFO] Booting worker with pid: 1464
+[2024-06-13 16:44:56 +0100] [1589] [INFO] Starting gunicorn 22.0.0
+[2024-06-13 16:44:56 +0100] [1589] [ERROR] Connection in use: ('0.0.0.0', 5001)
+[2024-06-13 16:44:56 +0100] [1589] [ERROR] Retrying in 1 second.
+[2024-06-13 16:44:57 +0100] [1589] [ERROR] Connection in use: ('0.0.0.0', 5001)
+[2024-06-13 16:44:57 +0100] [1589] [ERROR] Retrying in 1 second.
+[2024-06-13 16:44:58 +0100] [1589] [ERROR] Connection in use: ('0.0.0.0', 5001)
+[2024-06-13 16:44:58 +0100] [1589] [ERROR] Retrying in 1 second.
+[2024-06-13 16:44:59 +0100] [1589] [ERROR] Connection in use: ('0.0.0.0', 5001)
+[2024-06-13 16:44:59 +0100] [1589] [ERROR] Retrying in 1 second.
+[2024-06-13 16:45:00 +0100] [1437] [INFO] Handling signal: term
+[2024-06-13 16:45:00 +0100] [1461] [INFO] Worker exiting (pid: 1461)
+[2024-06-13 16:45:00 +0100] [1464] [INFO] Worker exiting (pid: 1464)
+[2024-06-13 16:45:00 +0100] [1437] [ERROR] Worker (pid:1464) was sent SIGTERM!
+[2024-06-13 16:45:00 +0100] [1589] [INFO] Listening at: http://0.0.0.0:5001 (1589)
+[2024-06-13 16:45:00 +0100] [1589] [INFO] Using worker: sync
+[2024-06-13 16:45:00 +0100] [1619] [INFO] Booting worker with pid: 1619
+[2024-06-13 16:45:00 +0100] [1620] [INFO] Booting worker with pid: 1620
+[2024-06-13 16:45:00 +0100] [1437] [INFO] Shutting down: Master
+[2024-06-13 16:45:00 +0100] [1589] [INFO] Handling signal: term
+[2024-06-13 16:45:03 +0100] [1619] [INFO] Worker exiting (pid: 1619)
+[2024-06-13 16:45:03 +0100] [1620] [INFO] Worker exiting (pid: 1620)
+[2024-06-13 16:45:04 +0100] [1589] [INFO] Shutting down: Master
+[2024-06-13 16:45:05 +0100] [1644] [INFO] Starting gunicorn 22.0.0
+[2024-06-13 16:45:05 +0100] [1644] [INFO] Listening at: http://0.0.0.0:5001 (1644)
+[2024-06-13 16:45:05 +0100] [1644] [INFO] Using worker: sync
+[2024-06-13 16:45:05 +0100] [1650] [INFO] Booting worker with pid: 1650
+[2024-06-13 16:45:05 +0100] [1653] [INFO] Booting worker with pid: 1653
+[2024-06-13 16:49:09 +0100] [1644] [INFO] Handling signal: term
+[2024-06-13 16:49:09 +0100] [1653] [INFO] Worker exiting (pid: 1653)
+[2024-06-13 16:49:09 +0100] [1650] [INFO] Worker exiting (pid: 1650)
+[2024-06-13 16:49:10 +0100] [1644] [ERROR] Worker (pid:1653) was sent SIGTERM!
+[2024-06-13 16:49:11 +0100] [1644] [INFO] Shutting down: Master
+[2024-06-13 16:49:12 +0100] [2596] [INFO] Starting gunicorn 22.0.0
+[2024-06-13 16:49:12 +0100] [2596] [INFO] Listening at: http://0.0.0.0:5001 (2596)
+[2024-06-13 16:49:12 +0100] [2596] [INFO] Using worker: sync
+[2024-06-13 16:49:12 +0100] [2601] [INFO] Booting worker with pid: 2601
+[2024-06-13 16:49:12 +0100] [2607] [INFO] Booting worker with pid: 2607
+[2024-06-13 17:10:32 +0100] [2596] [INFO] Handling signal: term
+[2024-06-13 17:10:33 +0100] [2601] [INFO] Worker exiting (pid: 2601)
+[2024-06-13 17:10:33 +0100] [2607] [INFO] Worker exiting (pid: 2607)
+[2024-06-13 17:10:33 +0100] [2596] [ERROR] Worker (pid:2607) was sent SIGTERM!
+[2024-06-13 17:10:34 +0100] [2596] [INFO] Shutting down: Master
+[2024-06-13 17:21:58 +0100] [10271] [INFO] Starting gunicorn 22.0.0
+[2024-06-13 17:21:58 +0100] [10271] [INFO] Listening at: http://0.0.0.0:5001 (10271)
+[2024-06-13 17:21:58 +0100] [10271] [INFO] Using worker: sync
+[2024-06-13 17:21:58 +0100] [10281] [INFO] Booting worker with pid: 10281
+[2024-06-13 17:21:58 +0100] [10282] [INFO] Booting worker with pid: 10282

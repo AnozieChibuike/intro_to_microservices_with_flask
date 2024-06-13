@@ -1,0 +1,11 @@
+#!/bin/bash
+
+source .venv/bin/activate
+nohup bash -c "cd api_gateway ; gunicorn --workers 2 --bind 0.0.0.0:5000 app:app --access-logfile logs/access.log --error-logfile logs/error.log" > /dev/null 2>&1 &
+echo $! >>pid.txt
+
+nohup bash -c "cd user_management ; gunicorn --workers 2 --bind 0.0.0.0:5001 app:app --access-logfile logs/access.log --error-logfile logs/error.log" > /dev/null 2>&1 &
+echo $! >>pid.txt
+
+nohup bash -c "cd todo_management ; gunicorn --workers 2 --bind 0.0.0.0:5002 app:app --access-logfile logs/access.log --error-logfile logs/error.log" > /dev/null 2>&1 &
+echo $! >>pid.txt

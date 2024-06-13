@@ -36,15 +36,28 @@ def entry():
     except Exception as e:
         return jsonify(str(e)), 400  # UNDOCUMENTED FOR NOW
 
+@app.post("/login")
+def login():
+    try:
+        email = request.json['email']
+        password = request.json['password']
+        if not User.exists(email=email):
+            return jsonify(error={"email":'No user with record found'}), 404
+        user = User.filter_one(email=email)
+        if not user.check_password(password):
+            return jsonify(error={"password":"Incorrect Password"}), 403
+        return jsonify(id=user.id), 200
+    except KeyError as e:
+        return jsonify(error=f'Missing required key in body {e}'), 403
 
 def create_user(data):
     try:
         if User.exists(email=data["email"]):
-            return jsonify(error="User with email exists")
+            return jsonify(error={"email":"User with email exists"}), 403
         user = User(email=data["email"])
         user.set_password(data["password"])
         user.save()
-        return jsonify(body=user.to_dict()), 201
+        return jsonify(id=user.id, email=user.email), 201
     except KeyError as e:
         return jsonify(error=f"Missing key in the json: {e}"), 400
     except Exception as e:

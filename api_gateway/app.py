@@ -1,16 +1,20 @@
 from flask import Flask, jsonify, request
 import api
-app = Flask(__name__)
+from flask_cors import CORS
 
+app = Flask(__name__)
+cors = CORS(app, resources={r"/*": {"origins": "*"}})
 port = 5000
+
 
 def handle_not_found(e):
     return jsonify(error="Not found"), 404
 
+
 app.register_error_handler(404, handle_not_found)
 
 
-@app.post('/user')
+@app.post("/user")
 def user():
     try:
         data = request.json
@@ -20,7 +24,8 @@ def user():
     except Exception as e:
         return jsonify(str(e)), 400  # UNDOCUMENTED FOR NOW
 
-@app.post('/todo')
+
+@app.post("/todo")
 def todo():
     try:
         data = request.json
@@ -31,6 +36,10 @@ def todo():
         return jsonify(str(e)), 400  # UNDOCUMENTED FOR NOW
 
 
-if __name__ == '__main__':
+@app.post("/login")
+def login():
+    return api.login(request.json)
+
+
+if __name__ == "__main__":
     app.run(port=port, debug=True)
- 
