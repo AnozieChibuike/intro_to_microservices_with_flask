@@ -39,7 +39,7 @@ def entry():
     
 def create_todo(data):
     try:
-        todo = Todo(user_id=data['user_id'],task=data['task'], completed=False)
+        todo = Todo(user_id=data['user_id'],task=data['task'], completed=False, tags=data.get('tags',[{ "tag": "dev", "color": "rgb(52, 135, 218)" },{ "tag": "free", "color": "rgb(46, 191,30)" }]))
         todo.save()
         return jsonify(body=todo.to_dict()), 201
     except KeyError as e:
@@ -86,5 +86,5 @@ def delete_todo(data):
         return jsonify(str(e)), 400
     
 if __name__ == '__main__':
-    app.run(port=port, debug=True)
+    app.run(port=port, debug=True, host="0.0.0.0")
  
